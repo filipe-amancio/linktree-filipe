@@ -1,0 +1,25 @@
+# Buscadores tradicionais
+User-agent: *
+Allow: /
+
+# Rastreadores de IA — decisão consciente: LIBERADOS, porque a página existe para ser encontrada
+# (para bloquear, troque "Allow: /" por "Disallow: /" no agente desejado)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://filipe-brandforge.vercel.app/sitemap.xml

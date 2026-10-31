@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sites e IA para pequenos negócios | BrandForge</title>
+  <meta name="description" content="Sites, atendimento com IA no WhatsApp e automações sob medida para pequenos negócios. Veja o portfólio e faça seu orçamento direto no WhatsApp.">
+  <link rel="canonical" href="https://filipe-brandforge.vercel.app/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#17140F">
+
+  <!-- Compartilhamento (WhatsApp, Instagram, Facebook, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="BrandForge">
+  <meta property="og:title" content="BrandForge: IA sob medida para o seu negócio">
+  <meta property="og:description" content="Veja o portfólio e faça seu orçamento direto no WhatsApp.">
+  <meta property="og:url" content="https://filipe-brandforge.vercel.app/">
+  <meta property="og:image" content="https://filipe-brandforge.vercel.app/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Marca BrandForge em fundo escuro com a frase IA sob medida para o seu negócio">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Ícones -->
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="/midia/fotos/perfil.webp" fetchpriority="high">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "BrandForge",
+    "description": "Sites, atendimento com IA no WhatsApp e automações sob medida para pequenos negócios no Brasil e em Portugal.",
+    "slogan": "IA sob medida para o seu negócio.",
+    "url": "https://filipe-brandforge.vercel.app/",
+    "image": "https://filipe-brandforge.vercel.app/og-image.jpg",
+    "telephone": "+55-61-99901-5955",
+    "areaServed": ["BR", "PT"],
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "sameAs": ["https://www.instagram.com/brandforgetech", "https://brandforge-siteoficial.vercel.app/"]
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+
+      /* Paleta oficial BrandForge (Obsidian e Ouro) */
+      --obsidiana: #17140F;
+      --obsidiana-alta: #211C15;
+      --filete: #3A3226;
+      --creme: #F1E9D8;
+      --areia: #CFC4AE;
+      --ouro: #D4AF6A;
+      --bronze: #8C5A2B;
+
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+
+      --serifa: "Playfair Display", Georgia, serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--obsidiana);
+      color: var(--creme);
+      font: 400 1rem/1.625 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    h1, h2, h3, p, ul { margin: 0; padding: 0; }
+    ul { list-style: none; }
+    a { color: inherit; }
+
+    a:focus-visible {
+      outline: 2px solid var(--ouro);
+      outline-offset: 3px;
+    }
+
+    .pagina {
+      width: min(100%, 980px);
+      margin-inline: auto;
+      padding: 0 var(--space-4) var(--space-8);
+    }
+
+    /* Wordmark: nome em Playfair com a linha fina de assinatura */
+    .wordmark {
+      font-family: var(--serifa);
+      font-weight: 600;
+      color: var(--ouro);
+      text-decoration: none;
+      line-height: 1.2;
+      display: inline-block;
+      padding-bottom: 5px;
+      background: linear-gradient(var(--ouro), var(--ouro)) center bottom / 45% 1px no-repeat;
+    }
+
+    .topo {
+      display: flex;
+      justify-content: center;
+      padding: var(--space-6) 0 var(--space-4);
+    }
+    .topo .wordmark { font-size: 1.375rem; }
+
+    /* Grade: uma coluna no celular, perfil + dois cartões no computador */
+    .grade { display: grid; gap: var(--space-3); }
+
+    /* Cartão com foto de fundo */
+    .carta {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--filete);
+      border-radius: var(--radius-lg);
+      background: var(--obsidiana-alta);
+      padding: var(--space-6);
+      text-decoration: none;
+    }
+    .carta > img {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .carta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .carta-perfil {
+      aspect-ratio: 8 / 9;
+      justify-content: flex-end;
+      border-color: var(--bronze);
+    }
+    .carta-perfil > img { object-position: center top; }
+    .carta-perfil::before {
+      background: linear-gradient(to top, rgb(23 20 15 / .96) 8%, rgb(23 20 15 / .7) 34%, rgb(23 20 15 / 0) 62%);
+    }
+    .carta-perfil h1 {
+      font-family: var(--serifa);
+      font-weight: 600;
+      font-size: clamp(1.875rem, 8.4vw, 2.5rem);
+      line-height: 1.15;
+    }
+    .carta-perfil p {
+      margin-top: var(--space-2);
+      color: var(--areia);
+      max-width: 38ch;
+    }
+
+    /* Peça pronta: borda de ouro e um único brilho ao abrir a página */
+    .carta-orcamento {
+      aspect-ratio: 4 / 3;
+      border: 2px solid var(--ouro);
+    }
+    .carta-orcamento::before {
+      background: linear-gradient(105deg, rgb(23 20 15 / .94) 12%, rgb(23 20 15 / .62) 48%, rgb(23 20 15 / .08) 82%);
+    }
+    .carta-orcamento::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(105deg, transparent 38%, rgb(212 175 106 / .34) 50%, transparent 62%);
+      transform: translateX(-110%);
+      animation: brilho 1.3s .5s cubic-bezier(.3, .1, .3, 1) forwards;
+    }
+    @keyframes brilho { to { transform: translateX(110%); } }
+
+    /* Peça ainda no molde: borda tracejada, sem ser link */
+    .carta-embreve {
+      aspect-ratio: 4 / 3;
+      justify-content: flex-end;
+      border: 1px dashed var(--ouro);
+    }
+    .carta-embreve::before {
+      background: linear-gradient(to top, rgb(23 20 15 / .94) 12%, rgb(23 20 15 / .5) 52%, rgb(23 20 15 / .12) 100%);
+    }
+
+    .carta-titulo {
+      font-family: var(--serifa);
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 1.15;
+      max-width: 9ch;
+    }
+    .carta-embreve .carta-titulo { max-width: none; }
+    .carta-texto {
+      margin-top: var(--space-2);
+      font-size: .875rem;
+      line-height: 1.57;
+      color: var(--areia);
+      max-width: 24ch;
+    }
+    .carta-embreve .carta-texto { max-width: 32ch; }
+
+    .botao {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      min-height: 44px;
+      margin-top: auto;
+      padding: 0 var(--space-4);
+      border-radius: var(--radius-md);
+      background: var(--ouro);
+      color: var(--obsidiana);
+      font-weight: 600;
+      font-size: .9375rem;
+      transition: background-color .2s;
+    }
+    .botao svg { width: 18px; height: 18px; flex: none; }
+    a:hover .botao { background: var(--creme); }
+
+    /* Site oficial: cartão baixo, com a logo no lugar da foto */
+    .carta-site {
+      flex-direction: row;
+      align-items: center;
+      gap: var(--space-4);
+      margin-top: var(--space-3);
+      padding: var(--space-4) var(--space-6);
+      transition: border-color .2s;
+    }
+    .carta-site:hover { border-color: var(--ouro); }
+    .carta-site > img {
+      position: static;
+      z-index: auto;
+      flex: none;
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+    .carta-site-texto { flex: 1; min-width: 0; }
+    .carta-site h2 {
+      font-family: var(--serifa);
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+    .carta-site p {
+      font-size: .875rem;
+      line-height: 1.57;
+      color: var(--areia);
+    }
+    .carta-site svg { width: 20px; height: 20px; flex: none; color: var(--ouro); }
+
+    /* Portfólio */
+    .portfolio { margin-top: var(--space-8); }
+    .portfolio h2 {
+      font-family: var(--serifa);
+      font-weight: 600;
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+    .portfolio-intro {
+      margin-top: var(--space-2);
+      color: var(--areia);
+      max-width: 56ch;
+    }
+    .vitrine {
+      display: grid;
+      gap: var(--space-3);
+      margin-top: var(--space-4);
+    }
+    .projeto {
+      aspect-ratio: 16 / 10;
+      justify-content: flex-end;
+      padding: var(--space-4);
+    }
+    .projeto > img { object-position: top; transition: transform .5s; }
+    .projeto:hover > img { transform: scale(1.03); }
+    .projeto:hover { border-color: var(--ouro); }
+    .projeto::before {
+      background: linear-gradient(to top, rgb(23 20 15 / 1) 36%, rgb(23 20 15 / 0) 54%);
+    }
+    .selo {
+      align-self: flex-start;
+      padding: 2px var(--space-2);
+      border: 1px solid var(--ouro);
+      border-radius: var(--radius-sm);
+      background: rgb(23 20 15 / .7);
+      color: var(--ouro);
+      font-size: .75rem;
+      line-height: 1.42;
+    }
+    .projeto h3 {
+      margin-top: var(--space-2);
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .projeto p {
+      font-size: .875rem;
+      line-height: 1.5;
+      color: var(--areia);
+    }
+
+    /* Rodapé */
+    .rodape {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      margin-top: var(--space-8);
+      padding-top: var(--space-6);
+      text-align: center;
+      color: var(--areia);
+      font-size: .875rem;
+    }
+    .rodape .wordmark { font-size: 1.125rem; }
+    .rodape a:not(.wordmark) {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      color: var(--ouro);
+      text-underline-offset: 4px;
+    }
+
+    @media (min-width: 760px) {
+      .pagina { padding-inline: var(--space-6); }
+      .grade {
+        grid-template-columns: 1.1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+      .carta-perfil { grid-row: span 2; aspect-ratio: auto; min-height: 560px; padding: var(--space-8); }
+      .carta-orcamento, .carta-embreve { aspect-ratio: auto; }
+      .vitrine { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .carta-orcamento::after { animation: none; display: none; }
+      .projeto > img, .botao { transition: none; }
+      .projeto:hover > img { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="pagina">
+    <header class="topo">
+      <a class="wordmark" href="/" aria-label="BrandForge, início">BrandForge</a>
+    </header>
+
+    <main>
+      <div class="grade">
+        <!-- FOTO DO PERFIL: substitua midia/fotos/perfil.webp (1200 × 1500) mantendo o nome do arquivo. -->
+        <section class="carta carta-perfil">
+          <img src="/midia/fotos/perfil.webp" alt="Filipe, da BrandForge" width="1200" height="1500" fetchpriority="high">
+          <h1>Filipe, da BrandForge</h1>
+          <p>Sites, atendimento com IA no WhatsApp e automações para pequenos negócios no Brasil e em Portugal.</p>
+        </section>
+
+        <!-- FOTO DO ORÇAMENTO: substitua midia/fotos/orcamento.webp (1200 × 900). Deixe o rosto à direita. -->
+        <a class="carta carta-orcamento" href="https://wa.me/5561999015955?text=Oii%2C%20eu%20sou%20%28seu%20nome%29%20e%20tenho%20interesse%20em%20desenvolver%20um%20site%20com%20voc%C3%AAs%20da%20BrandForge.%20Quais%20informa%C3%A7%C3%B5es%20voc%C3%AAs%20precisam%20sobre%20o%20meu%20neg%C3%B3cio%3F" target="_blank" rel="noopener">
+          <img src="/midia/fotos/orcamento.webp" alt="" width="1200" height="900">
+          <h2 class="carta-titulo">Fazer orçamento</h2>
+          <span class="botao">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.13-1.35A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.04.8.81-2.97-.2-.3a8.2 8.2 0 1 1 6.91 3.79Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.09-.39-.13-.55.12-.17.24-.64.8-.78.96-.14.17-.29.19-.53.06a6.7 6.7 0 0 1-2-1.23 7.5 7.5 0 0 1-1.38-1.72c-.15-.25 0-.38.1-.5.12-.11.25-.29.38-.43.12-.15.16-.25.24-.42.09-.16.05-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.66.3 2.76 2.76 0 0 0-.86 2.05c0 1.21.88 2.38 1 2.55.13.16 1.74 2.65 4.2 3.72.59.25 1.05.4 1.4.52.6.19 1.13.16 1.56.1.47-.07 1.46-.6 1.67-1.17.2-.58.2-1.07.14-1.17-.06-.11-.22-.17-.47-.3Z"/></svg>
+            Chamar no WhatsApp
+          </span>
+        </a>
+
+        <!-- EM BREVE: quando o produto digital estiver pronto, troque <section ...> e </section> por
+             <a class="carta carta-embreve" href="LINK-DO-PRODUTO" target="_blank" rel="noopener"> e </a>,
+             e ajuste o título e o texto. Foto: substitua midia/fotos/em-breve.webp (1200 × 900). -->
+        <section class="carta carta-embreve">
+          <img src="/midia/fotos/em-breve.webp" alt="" width="1200" height="900" loading="lazy">
+          <h2 class="carta-titulo">Em breve</h2>
+          <p class="carta-texto">Nosso produto digital está na forja.</p>
+        </section>
+      </div>
+
+      <a class="carta carta-site" href="https://brandforge-siteoficial.vercel.app/" target="_blank" rel="noopener">
+        <img src="/midia/logo-brandforge.webp" alt="Logo da BrandForge" width="168" height="168" loading="lazy">
+        <div class="carta-site-texto">
+          <h2>BrandForge</h2>
+          <p>Conheça nosso site oficial</p>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+
+      <section class="portfolio" aria-labelledby="portfolio-titulo">
+        <h2 id="portfolio-titulo">Portfólio</h2>
+        <p class="portfolio-intro">Projetos conceituais que criamos para mostrar o que entregamos. Não são clientes: são demonstrações no ar, para você abrir e testar.</p>
+
+        <ul class="vitrine">
+          <li>
+            <a class="carta projeto" href="https://chicagoburgersite.vercel.app/" target="_blank" rel="noopener">
+              <img src="/midia/portfolio/memphis-burger.webp" alt="Página inicial do site conceitual da hamburgueria Memphis Burger, com foto de hambúrguer em fundo escuro" width="800" height="500" loading="lazy">
+              <span class="selo">Projeto conceitual</span>
+              <h3>Memphis Burger</h3>
+              <p>Hamburgueria em Brasília</p>
+            </a>
+          </li>
+          <li>
+            <a class="carta projeto" href="https://imobiliaria-lyart.vercel.app/" target="_blank" rel="noopener">
+              <img src="/midia/portfolio/casa-alta-imobiliaria.webp" alt="Página inicial do site conceitual da Casa Alta Imobiliária, com sala de apartamento de alto padrão ao fundo e a busca de imóveis" width="800" height="500" loading="lazy">
+              <span class="selo">Projeto conceitual</span>
+              <h3>Casa Alta Imobiliária</h3>
+              <p>Imobiliária de alto padrão em Brasília</p>
+            </a>
+          </li>
+          <li>
+            <a class="carta projeto" href="https://site-paola-kappa.vercel.app/" target="_blank" rel="noopener">
+              <img src="/midia/portfolio/paola-marra-advocacia.webp" alt="Página inicial do site conceitual de advocacia Paola Marra, com a palavra clareza em letras grandes sobre fundo escuro" width="800" height="500" loading="lazy">
+              <span class="selo">Projeto conceitual</span>
+              <h3>Paola Marra Advocacia</h3>
+              <p>Advocacia de família e trabalho em Brasília</p>
+            </a>
+          </li>
+          <li>
+            <a class="carta projeto" href="https://site-rapechingu.vercel.app" target="_blank" rel="noopener">
+              <img src="/midia/portfolio/rape-xingu.webp" alt="Página inicial do site conceitual da loja Rapé Xingu" width="800" height="500" loading="lazy">
+              <span class="selo">Projeto conceitual</span>
+              <h3>Rapé Xingu</h3>
+              <p>Loja virtual de produto artesanal</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <a class="wordmark" href="/">BrandForge</a>
+      <p>IA sob medida para o seu negócio.</p>
+      <a href="https://www.instagram.com/brandforgetech" target="_blank" rel="noopener">@brandforgetech no Instagram</a>
+    </footer>
+  </div>
+</body>
+</html>
